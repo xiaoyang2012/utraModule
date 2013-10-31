@@ -73,7 +73,7 @@ UART_TX,
 UART_RX,
 UART_CK,
 
-//SD卡
+//SD鍗
 SD_SCK,
 SD_MOSI,
 SD_CS,
@@ -92,16 +92,21 @@ LED
 input CLK_IN;
 input RST_IN;
 
-input ADC_D0;
-input ADC_D1;
-input ADC_D2;
-input ADC_D3;
+//====硬件错误，必须修改才能继续编译
+output ADC_D0;
+output ADC_D1;
+output ADC_D2;
+output ADC_D3;
+output ADC_CLKO;
+output ADC_OF;
+//===========end==========
+
 input ADC_D4;
 input ADC_D5;
 input ADC_D6;
 
-input ADC_CLKO;		
-input ADC_OF;			
+		
+			
 
 output ADC_ENC;		
 output ADC_nCS;
@@ -117,7 +122,7 @@ output AGV_LTCH;
 inout [15:0]DRAM_DATA;
 output [15:0]DRAM_ADDR;
 output [2:0]DRAM_BA;
-output DRAM_CLK;
+input DRAM_CLK;
 input DRAM_DQS0;
 input DRAM_DQS1;
 output [1:0]DRAM_DQM;
