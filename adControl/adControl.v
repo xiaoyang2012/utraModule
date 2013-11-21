@@ -66,8 +66,6 @@ output doutEn;
 wire [6:0]ddio_din;
 wire [6:0]ddio_douth;
 wire [6:0]ddio_doutl;
-
-
 //=========================code================================
 assign ddio_din = {ADC_D6,ADC_D5,ADC_D4,ADC_D3,ADC_D2,ADC_D1,ADC_D0};
 assign dout = {ddio_douth,ddio_doutl};
@@ -78,7 +76,5 @@ AD_DDIO U0(
 	.inclock(ADC_CLKO),
 	.dataout_h(ddio_douth),
 	.dataout_l(ddio_doutl));
-
-
 
 endmodule
